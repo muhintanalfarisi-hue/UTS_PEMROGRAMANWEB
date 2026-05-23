@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Modern Web</title>
+    <style>
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .btn-socialf {
+            display: flex;
+            align-items: center;
+            padding: 8px 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background: rgb(41, 106, 203);
+            cursor: pointer;
+            font-size: 12px;
+            color: #555;
+            font-weight: bold;
+        }
+        .btn-social {
+            display: flex;
+            align-items: center;
+            padding: 8px 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background: #f0f0f0;
+            cursor: pointer;
+            font-size: 12px;
+            color: #999;
+            font-weight: bold;
+        }
+        .password-group {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;      /* Jarak dari sisi kanan */
+    top: 50%;         /* Berada di tengah secara vertikal */
+    transform: translateY(-50%);
+    cursor: pointer;  /* Kursor berubah jadi tangan saat diarahkan */
+    display: flex;
+    align-items: center;
+}
+
+.eye-icon:hover svg {
+    stroke: #00a2e9;  /* Berubah warna biru saat disentuh */
+}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style> body { font-family: 'Poppins', sans-serif; } </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">TECH-SOLVE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active text-info" href="signin.html">Sign In</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-info btn-sm ms-2" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item ms-3">
+                        <button class="btn btn-sm btn-outline-light rounded-circle" id="darkModeToggle">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-auto py-5 flex-grow-1 d-flex align-items-center">
+        <div class="row w-100 align-items-center g-5 m-0">
+            <div class="col-md-6 text-start ps-md-5">
+                <h1 class="display-4 brand-title mb-4 fw-bold text-info">TECH-SOLVE</h1>
+                <p class="text-muted small italic fw-semibold">Innovations that empower your future</p>
+            </div>
+ 
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="container my-5 py-5 flex-grow-1">
+                <div>
+                    <div class="card shadow-lg p-5 border-0" data-aos="zoom-in" style="background-color: var(--card-bg); max-width: 450px; width:100%;">
+                        <h3 class="text-center fw-bold mb-4 text-info">Masuk Ke Akun</h3>
+                        <form action="#">
+                            <div class="mb-3">
+                                <label class="form-label">Username / Email</label>
+                                <input type="text" class="form-control py-2" placeholder="Masukkan Username" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Password</label>
+                            <div class="password-group">
+                                <input type="password" class="form-control py-2" id="inputSandi" placeholder="Masukkan Password" required>
+                                <span class="eye-icon" onclick="togglePassword()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+    </span>
+                            </div>
+                            </div>
+                            <button type="submit" class="btn btn-info w-100 py-2 text-white fw-bold">Login</button>
+                <div class="social-login">
+                    <button type="button" class="btn-socialf" style="color: #f3f3f4;">
+                        <img src="https://i.ibb.co.com/60d2QVfm/1713419345-White-Facebook-PNG.png" alt="Facebook" width="20">Facebook
+                    </button>
+                    <button type="button" class="btn-social">
+                        <img src="https://i.ibb.co.com/LXjYqx6X/google-g-logo-85b2.png" alt="Google" width="20">Google
+                    </button>
+                </div>
+                        </form>
+                        <div class="text-center mt-3">
+                            <small>Belum punya akun? <a href="signup.html" class="text-info text-decoration-none fw-bold">Daftar di sini</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0 opacity-75">&copy; 2026 TECH-SOLVE Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function togglePassword() {
+            var sandi = document.getElementById("inputSandi");
+            if (sandi.type === "password") {
+                sandi.type = "text"; // Ubah jadi teks agar terlihat
+            } else {
+                sandi.type = "password"; // Ubah kembali ke titik-titik
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        const darkModeBtn = document.getElementById('darkModeToggle');
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            darkModeBtn.innerHTML = '☀️';
+        }
+        darkModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            darkModeBtn.innerHTML = isDark ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
