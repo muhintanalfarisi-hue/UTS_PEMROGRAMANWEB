@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Modern Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style> body { font-family: 'Poppins', sans-serif; } </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">TECH-SOLVE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active text-info" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signin.html">Sign In</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-info btn-sm ms-2" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item ms-3">
+                        <button class="btn btn-sm btn-outline-light rounded-circle" id="darkModeToggle">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <h2 class="text-center fw-bold mb-4 text-info">Hubungi Kami</h2>
+            <div class="col-lg-8 card border-0 shadow-lg p-5" data-aos="flip-up">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-semibold">Nama Lengkap</label>
+                            <input type="text" class="form-control" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-semibold">Email</label>
+                            <input type="email" class="form-control" placeholder="email@contoh.com" required>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Pesan Anda</label>
+                        <textarea class="form-control" rows="5" placeholder="Tulis pesan atau pertanyaan Anda di sini..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-3 fw-bold shadow-sm">Kirim Pesan Sekarang</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container contact-info-panel d-flex flex-direction-column justify-content-center social-divider">
+                        <div class="mb-4 d-flex align-items-center gap-3">
+                            <i class="fab fa-instagram text-info fs-5"></i>
+                            <span class="fs-6">@techsolve.agency</span>
+                            <i class="fab fa-twitter text-info fs-5"></i>
+                            <span class="fs-6">@TechSolveAgency</span>
+                        </div>
+     </div>
+     
+     <div class="contact-info-panel d-flex flex-direction-column justify-content-center social-divider">
+                        <div class="mb-4 d-flex align-items-center gap-3">
+                            <i class="fas fa-phone text-info fs-5"></i>
+                            <span class="fs-6">+62 123 4567 890</span>
+                            <i class="fab fa-facebook-f text-info fs-5"></i>
+                            <span class="fs-6">TechSolve.Agency</span>
+                        </div>
+     </div> 
+
+     <div class="contact-info-panel d-flex flex-direction-column justify-content-center social-divider">
+                        <div class="mb-4 d-flex align-items-center gap-3">
+                            <i class="fab fa-linkedin-in text-info fs-5"></i>
+                            <span class="fs-6">linkedin.com/in/techsolve-agency</span>
+                        </div>
+     </div> 
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0 opacity-75">&copy; 2026 TECH-SOLVE Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        const darkModeBtn = document.getElementById('darkModeToggle');
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            darkModeBtn.innerHTML = '☀️';
+        }
+        darkModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            darkModeBtn.innerHTML = isDark ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
